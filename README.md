@@ -1,5 +1,6 @@
 # springboot集成dubbo
 1.集成时的pom.xml,生产者，消费者都一样
+```
 <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -38,6 +39,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    ```
 2.配置文件
 dubbo:
   application:
