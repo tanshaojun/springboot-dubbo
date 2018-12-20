@@ -1,0 +1,12 @@
+dubbo:
+  application:
+    name: producer
+    id: producer
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  scan:
+    base-packages: com.example.producer.service
+  protocol:
+    port: 12345
+    id: dubbo
+    name: dubbo
