@@ -1,0 +1,19 @@
+# idea ignore
+.idea/
+spring-boot-consumer/.idea/
+spring-boot-producer-el/.idea/
+
+*.iml
+*.ipr
+*.iws
+
+# out/
+spring-boot-consumer/spring-boot-consumer.iml
+spring-boot-producer/spring-boot-producer.iml
+
+# target
+spring-boot-consumer/target/
+spring-boot-producer/target/
+
+
+
