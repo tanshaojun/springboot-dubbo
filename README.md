@@ -119,4 +119,4 @@ public class SpringBootConsumerApplication {
 
 }
 ```
-dubbo官网列子：[https://github.com/apache/incubator-dubbo-spring-boot-project/blob/master/README_CN.md]
+[dubbo git](https://github.com/apache/incubator-dubbo-spring-boot-project)
