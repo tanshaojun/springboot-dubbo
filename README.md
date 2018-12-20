@@ -39,7 +39,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    ```
+    
 2.配置文件
 dubbo:
   application:
@@ -62,6 +62,7 @@ public class ProducerServiceImpl implements ProducerService {
         return "hello," + name;
     }
 }
+
 4.springboot启动类
 @SpringBootApplication
 public class SpringBootProducerApplication {
