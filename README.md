@@ -1,6 +1,7 @@
 # springboot集成dubbo
-1.集成时的pom.xml,生产者，消费者都一样
+# 生产者
 ```
+1.集成时的pom.xml,生产者，消费者都一样
 <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -72,3 +73,50 @@ public class SpringBootProducerApplication {
     }
 
 }
+```
+
+# 消费者
+```
+1.配置
+dubbo:
+  application:
+    name: consumer
+    id: consumer
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    port: 12344
+    id: dubbo-consumer
+    name: dubbo-consumer
+    
+2.生产者发布的接口（路径必须一致）
+package com.example.producer.service;
+
+public interface ProducerService {
+    String sayHello(String name);
+}
+
+3.消费者使用
+@Service
+public class ConsumerService {
+
+    @Reference
+    ProducerService producerService;
+
+    public void sayHello() {
+        String s = producerService.sayHello("world");
+        System.out.println(s);
+    }
+}
+
+4.启动类
+@SpringBootApplication
+public class SpringBootConsumerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootConsumerApplication.class, args);
+	}
+
+}
+```
+dubbo官网列子：[https://github.com/apache/incubator-dubbo-spring-boot-project/blob/master/README_CN.md]
